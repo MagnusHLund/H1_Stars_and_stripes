@@ -7,11 +7,10 @@
             bool isRed = true;
             int redCounter = 0;
 
-            Console.ForegroundColor = ConsoleColor.White;
-
+            // For loop, which runs 26 times which is the total lines of the height
             for(int i = 0; i < 26;  i++)
             {
-
+                // Checks the value of i and writes the appropriate colors, in the console, based on the isRed value
                 if (i == 0)
                 {
                     // without stars
@@ -57,12 +56,16 @@
                     Console.Write("                                      ");
                 }
 
+                // Goes to the next line
                 Console.WriteLine();
 
+                // Checks if red is true or false
                 if (isRed)
                 {
+                    // Counts up to change the color to white. ++ means +1
                     redCounter++;
 
+                    // if redCounter reaches 2, then it makes isRed false as well as resetting the counter to 0
                     if (redCounter == 2)
                     {
                         isRed = false;
@@ -71,8 +74,10 @@
                 }
                 if (!isRed)
                 {
+                    // Counts up on the redCounter, by 1
                     redCounter++;
 
+                    // If it reaches 3 then it changes isRed to true
                     if (redCounter == 3)
                     {
                         isRed = true;
