@@ -8,21 +8,21 @@
             int redCounter = 0;
 
             // For loop, which runs 26 times which is the total lines of the height
-            for(int i = 0; i < 26;  i++)
+            for (int i = 0; i < 26; i++)
             {
                 // Checks the value of i and writes the appropriate colors, in the console, based on the isRed value
-                if (i == 0)
+                if (i == 0 || i == 10)
                 {
                     // without stars
 
                     Console.BackgroundColor = ConsoleColor.Blue;
                     Console.Write("                       ");
-                    if(isRed)
+                    if (isRed)
                         Console.BackgroundColor = ConsoleColor.Red;
                     else
                         Console.BackgroundColor = ConsoleColor.White;
                     Console.Write("               ");
-                } 
+                }
                 else if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9)
                 {
                     // Blue with stars, type 1
@@ -35,7 +35,7 @@
                         Console.BackgroundColor = ConsoleColor.White;
                     Console.Write("               ");
                 }
-                else if (i == 2 || i == 4 ||i == 6 || i == 8 ||i == 10)
+                else if (i == 2 || i == 4 || i == 6 || i == 8)
                 {
                     // Blue with stars, type 2
                     Console.BackgroundColor = ConsoleColor.Blue;
